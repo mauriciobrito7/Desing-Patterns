@@ -1,0 +1,20 @@
+Definición
+
+Asegurar una clase tiene sólo una instancia y proporcionar un punto de acceso global a ella.
+
+Explicación
+
+En la ingeniería de software, el patrón Singleton es un patrón de diseño que restringe la creación de instancias de una clase a un objeto. Esto es útil cuando se necesita exactamente un objeto de coordinar las acciones de todo el sistema. El concepto es a veces generalizarse a sistemas que operan de manera más eficiente cuando sólo existe un objeto, o que restringen la instanciación de un cierto número de objetos. El término proviene del concepto matemático de un conjunto unitario.
+
+Hay críticas al uso del patrón Singleton, ya que algunos consideran que es un anti-modelo, pues considera que es usado en exceso, introduce restricciones innecesarias en situaciones en las que no se requiere realmente una única instancia de una clase, e introduce el estado global en una aplicación .
+
+Uso común:
+
+La fábrica abstracta, constructor, y los patrones prototipo puede utilizar Singleton en su aplicación.
+objetos de fachada a menudo son únicos porque se requiere sólo un objeto de la fachada.
+objetos de estado son a menudo únicos.
+Singleton se prefieren a menudo a las variables globales porque: No contaminan el espacio de nombres global (o, en los idiomas con los espacios de nombres, que contiene su espacio de nombres) con las variables innecesarias.
+Ellos permiten la asignación e inicialización perezosa, mientras que las variables globales en muchos idiomas siempre consumirán recursos.
+Implementación de un patrón singleton debe satisfacer la única instancia y los principios de acceso a nivel mundial. Se requiere un mecanismo para acceder al miembro de la clase Singleton sin crear un objeto de clase y un mecanismo para conservar el valor de los miembros de la clase de los objetos de la clase. El patrón Singleton se lleva a cabo mediante la creación de una clase con un método que crea una nueva instancia de la clase si no existe uno. Si una instancia ya existe, simplemente devuelve una referencia a ese objeto. Para asegurarse de que el objeto no se pueden crear instancias de otra manera, el constructor se hace privada. Tenga en cuenta la distinción entre un simple instancia estática de una clase y un producto único: si bien un conjunto unitario puede ser implementado como una instancia estática, sino que también puede ser construido con pereza, que no requiere recursos de memoria o hasta que se necesite.
+
+El patrón Singleton debe ser construido cuidadosamente en aplicaciones multihilo. Si dos hilos son para ejecutar el método de creación en el mismo momento en el que todavía no existe un conjunto unitario, ambos deben verificar si hay una instancia del singleton y sólo uno debe crear la nueva. Si el lenguaje de programación tiene capacidades de procesamiento concurrente El método debe ser construida para ejecutar una operación como mutuamente excluyentes. La solución clásica a este problema es el uso de la exclusión mutua de la clase que indica que el objeto está siendo instanciado.

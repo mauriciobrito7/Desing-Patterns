@@ -1,0 +1,14 @@
+// tsconfig.json
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "sourceMap": true,
+        "watch": true,
+        "outDir": "build",
+        "rootDir": "src"
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
