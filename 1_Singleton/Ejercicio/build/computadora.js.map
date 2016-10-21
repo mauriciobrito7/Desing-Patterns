@@ -1,0 +1,1 @@
+{"version":3,"file":"computadora.js","sourceRoot":"","sources":["../src/computadora.ts"],"names":[],"mappings":";AAAA,4BAAuB,aAAa,CAAC,CAAA;AAEpC;IAGI;QACI,OAAO,CAAC,GAAG,CAAC,0BAA0B,CAAC,CAAC;QACzC,IAAI,CAAC,qBAAqB,GAAE,qBAAS,CAAC,YAAY,EAAE,CAAC;IACxD,CAAC;IAEM,aAAa;QAChB,IAAI,CAAC,qBAAqB,CAAC,aAAa,EAAE,CAAC;IAC/C,CAAC;AACN,CAAC;AAXa,mBAAW,cAWxB,CAAA"}

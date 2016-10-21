@@ -10,7 +10,7 @@ class Singleton {
         private static _singleton: Singleton = null;
 
         //El constructor debe ser privado para que no pueda ser instanciada
-        constructor() {
+        private constructor() {
             //Como en typescript no existe final tenemos que comprobar cuando se haya creado otro objeto
             if (Singleton._singleton) {
                 throw new Error("Error: La instanciación fallo, use Singleton.current para crear una nueva instancia");
@@ -37,12 +37,7 @@ class Singleton {
     //Todos van a tener el contenido de un solo objeto
     //---Prueba del singleton---
     
-    var singleton1 = new Singleton();
+    var singleton1 = Singleton.current;
     singleton1.mostrar();
     var singleton2 = Singleton.current;
     singleton2.mostrar();
-    try{
-        var singleton3 = new Singleton();// ERROR        
-    }catch(error){
-        console.log(error.message);
-    }
